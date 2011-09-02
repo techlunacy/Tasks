@@ -18,7 +18,7 @@
         <div class="display-field"><%: String.Format("{0:g}", Model.DueDate) %></div>
         
         <div class="display-label">Task</div>
-        <div class="display-field"><%: Model.Task %></div>
+        <div class="display-field"><%: Model.Name %></div>
         
         <div class="display-label">Priority</div>
         <div class="display-field"><%: Model.Priority %></div>

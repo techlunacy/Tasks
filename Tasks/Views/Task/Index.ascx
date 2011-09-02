@@ -1,56 +1,36 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<IEnumerable<Tasks.Models.TaskModel>>" %>
-
-    <table>
+<p>
+    <%: Html.ActionLink("Create New", "Create") %>
+</p>
+<table id="sortedtable" class="tablesorter full_page">
+    <thead>
         <tr>
-            <th></th>
             <th>
-                Id
+                Due Date
             </th>
             <th>
-                DueDate
-            </th>
-            <th>
-                Task
+                Name
             </th>
             <th>
                 Priority
             </th>
-            <th>
-                User
-            </th>
         </tr>
-
-    <% foreach (var item in Model) { %>
-    
-        <tr>
+    </thead>
+    <tbody>
+        <% foreach (var item in Model)
+           {
+        %>
+        <tr class="<%=(item.IsDueToday ? "urgent" : "normal") %>">
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new { id=item.Id }) %> |
-                <%: Html.ActionLink("Details", "Details", new { id = item.Id })%> |
-                <%: Html.ActionLink("Delete", "Delete", new { id = item.Id })%>
+                <%: String.Format("{0:d}", item.DueDate) %>
             </td>
             <td>
-                <%: item.Id %>
-            </td>
-            <td>
-                <%: String.Format("{0:g}", item.DueDate) %>
-            </td>
-            <td>
-                <%: item.Task %>
+                <%: item.Name %>
             </td>
             <td>
                 <%: item.Priority %>
             </td>
-            <td>
-                <%: item.User %>
-            </td>
         </tr>
-    
-    <% } %>
-
-    </table>
-
-    <p>
-        <%: Html.ActionLink("Create New", "Create") %>
-    </p>
-
-
+        <% } %>
+    </tbody>
+</table>

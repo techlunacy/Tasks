@@ -5,7 +5,7 @@ to use a different color start by replacing all instances of
 ----------------------------------------------------------*/
 body
 {
-    background-color: #5c87b2;
+    background-color: #99CC99;
     font-size: .75em;
     font-family: Verdana, Helvetica, Sans-Serif;
     margin: 0;
@@ -15,21 +15,21 @@ body
 
 a:link
 {
-    color: #034af3;
+    color: #000000;
     text-decoration: underline;
 }
 a:visited
 {
-    color: #505abc;
+    color: #000000;
 }
 a:hover
 {
-    color: #1d60ff;
+    color: #000000;
     text-decoration: none;
 }
 a:active
 {
-    color: #12eb87;
+    color: #000000;
 }
 
 p, ul
@@ -160,7 +160,7 @@ ul#menu li a
     text-decoration: none;
     line-height: 2.8em;
     background-color: #e8eef4;
-    color: #034af3;
+    color: #000000;
 }
 
 ul#menu li a:hover
@@ -341,4 +341,14 @@ div#title
 .tri-state
 {
     width: 6em;
+}
+.full_page
+{
+    width:100%;
+}
+.urgent TD
+{
+   font-weight:bolder;
+   background-color:Silver;
+   
 }
